@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:xx-large;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+    grid-template-rows: 0.3fr 2fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main extra extra"
+    "banner banner banner banner"
+    ;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    
+      
+}
+
+.header {
+    display: grid;
+    background-color: black;
+    grid-area: header;
+    align-items: center;
+}
+
+nav {
+    background-color: red;
+    grid-area: menu;
+    align-items: center;
+    display: grid;
+}
+
+.hero {
+    background-color:rgb(95, 136, 160);
+    grid-area: hero;
+    align-items: center;
+    display: grid;
+}
+.main {
+    background-color: rgb(116, 3, 3);
+    grid-area: main;
+    align-items: center;
+    display: grid;
+}
+.image {
+    background-color:rgb(182, 182, 224);
+    grid-area: image;
+    align-items: center;
+    display: grid;
+}
+.extra {
+    background-color:limegreen;
+    grid-area: extra;
+    align-items: center;
+    display: grid;
+}
+.banner {
+    background-color: orange;
+    grid-area: banner;
+    align-items: center;
+    display: grid;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        color: #fff;
+        display: grid;
+        grid-template-columns: 0.5fr 1.75fr 0.75fr;
+        grid-template-rows: 0.3fr 1.75fr 2fr 0.75fr 0.5fr;
+        grid-template-areas: 
+        "header header header "
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image"
+        ;
+        height: 100vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        color: #fff;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: 
+        "header" 
+        "menu" 
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+        height: 100vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
